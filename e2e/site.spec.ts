@@ -85,7 +85,7 @@ test("events list, filters, month view and event page", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Test Band");
   await expect(page.getByRole("link", { name: "Sign up / Tickets" })).toHaveAttribute("href", "https://example.com/tickets");
   await expect(page.getByText(/AM$/)).toBeVisible(); // ends 1 AM, past midnight
-  await expect(page.getByRole("link", { name: "Facebook" })).toHaveAttribute("href", /facebook\.com\/sharer/);
+  await expect(page.getByLabel("Share this event").getByRole("link", { name: "Facebook" })).toHaveAttribute("href", /facebook\.com\/sharer/);
   await page.goto("/events/test-bingo");
   await expect(page.getByText("Every Sun")).toBeVisible();
   await page.goto("/events/test-past");

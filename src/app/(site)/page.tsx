@@ -122,15 +122,11 @@ export default function Home() {
                 ))}
               </tbody>
             </table>
-            <p className="ph" style={{ fontSize: 14, marginTop: 8 }}>{SITE.barHours ?? "Bar hours: to be confirmed"}</p>
+            <p style={{ fontSize: 14, marginTop: 8 }}>Bar: {SITE.barHours.text}</p>
           </div>
           <div>
             <h3>Address</h3>
-            {SITE.address ? (
-              <p style={{ margin: 0 }}>{SITE.address.street}<br />{SITE.address.city}, {SITE.address.region} {SITE.address.postalCode}</p>
-            ) : (
-              <p className="ph" style={{ margin: 0 }}>[Street address, Lakewood, OH — to be confirmed]</p>
-            )}
+            <p style={{ margin: 0 }}>{SITE.address.street}<br />{SITE.address.city}, {SITE.address.region} {SITE.address.postalCode}</p>
           </div>
           <div>
             <h3>Phone</h3>
@@ -188,14 +184,13 @@ function restaurantJsonLd() {
     servesCuisine: "American",
     hasMenu: `${SITE.siteUrl}/menu`,
     potentialAction: { "@type": "OrderAction", target: SITE.orderUrl, deliveryMethod: "http://purl.org/goodrelations/v1#DeliveryModePickUp" },
-    openingHoursSpecification: SITE.kitchenHours.map((h) => ({
+    // Opening hours are the bar's; closing before opening means after midnight.
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.days.map((d) => day[d]),
-      opens: h.open,
-      closes: h.close === "24:00" ? "23:59" : h.close,
-    })),
-    ...(SITE.address && {
-      address: { "@type": "PostalAddress", streetAddress: SITE.address.street, addressLocality: SITE.address.city, addressRegion: SITE.address.region, postalCode: SITE.address.postalCode },
-    }),
+      dayOfWeek: day,
+      opens: SITE.barHours.open,
+      closes: SITE.barHours.close,
+    },
+    address: { "@type": "PostalAddress", streetAddress: SITE.address.street, addressLocality: SITE.address.city, addressRegion: SITE.address.region, postalCode: SITE.address.postalCode },
   };
 }
