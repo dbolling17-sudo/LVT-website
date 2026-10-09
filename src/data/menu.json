@@ -1,0 +1,669 @@
+{
+  "source": "New LVT20.pdf from Devon, 2026-10-09 (copy at /mnt/project-files/menu/LVT-menu-2026-10-09.pdf)",
+  "business": {
+    "name": "Lakewood Village Tavern",
+    "established": 1939,
+    "tagline": "Friends, Food & Spirits",
+    "phone": "216-521-0301",
+    "kitchenHours": {
+      "Sunday-Thursday": "11am-11pm",
+      "Friday-Saturday": "11am-12am"
+    },
+    "consumerAdvisory": "Consumption of under cooked meat, poultry, eggs, or seafood may increase the risk of food borne illnesses."
+  },
+  "currency": "USD",
+  "categories": [
+    {
+      "name": "Starters",
+      "items": [
+        {
+          "name": "Jumbo Chicken Wings",
+          "description": "Naked or Breaded. Served with Celery and Blue Cheese or Ranch",
+          "prices": [
+            {
+              "label": "6",
+              "price": 7.5
+            },
+            {
+              "label": "10",
+              "price": 12.0
+            }
+          ],
+          "options": {
+            "Style": [
+              "Naked",
+              "Breaded"
+            ],
+            "Sauce": [
+              "Mild",
+              "Medium",
+              "Hot",
+              "Old Bay",
+              "BBQ",
+              "JD BBQ",
+              "Shaolin",
+              "Honey Chipotle",
+              "House",
+              "Garlic",
+              "Garlic Parmesan",
+              "Honey Mustard",
+              "Jamaican Jerk",
+              "Cajun",
+              "Teriyaki"
+            ],
+            "Dip": [
+              "Blue Cheese",
+              "Ranch"
+            ]
+          },
+          "needsReview": [
+            "Printed menu spells 'Jamiacan Jerk'; corrected to 'Jamaican Jerk'"
+          ]
+        },
+        {
+          "name": "Boneless Wings and Fries",
+          "description": "Lightly Breaded Crispy Chicken. Served with Celery and Blue Cheese or Ranch",
+          "prices": [
+            {
+              "label": "Regular",
+              "price": 10.0
+            },
+            {
+              "label": "Large",
+              "price": 14.0
+            }
+          ],
+          "options": {
+            "Dip": [
+              "Blue Cheese",
+              "Ranch"
+            ]
+          }
+        },
+        {
+          "name": "Chicken Fingers (5)",
+          "description": "Hand Breaded Buttermilk Fried Chicken",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "name": "Pierogies by Pierogi Lady (4)",
+          "description": "Four Cheese or Potato Cheddar Bacon. Served with Grilled Onions and Sour Cream",
+          "prices": [
+            {
+              "label": "",
+              "price": 11.0
+            }
+          ],
+          "options": {
+            "Filling": [
+              "Four Cheese",
+              "Potato Cheddar Bacon"
+            ]
+          }
+        },
+        {
+          "name": "Breaded Shrooms (12)",
+          "description": "Served with Ranch",
+          "prices": [
+            {
+              "label": "",
+              "price": 7.0
+            }
+          ]
+        },
+        {
+          "name": "Jalapeno Poppers (6)",
+          "description": "Served with Ranch",
+          "prices": [
+            {
+              "label": "",
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "name": "Mini Corn Dogs (12)",
+          "description": "Served with Honey Mustard",
+          "prices": [
+            {
+              "label": "",
+              "price": 9.0
+            }
+          ]
+        },
+        {
+          "name": "Pretzel Bread Sticks (4)",
+          "description": "Served with Cheese Sauce",
+          "prices": [
+            {
+              "label": "",
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "name": "Fried Cheese Curds",
+          "description": "Served with Marinara Sauce",
+          "prices": [
+            {
+              "label": "",
+              "price": 7.5
+            }
+          ]
+        },
+        {
+          "name": "Stuffed Tater Tots (5)",
+          "description": "Cheddar, Bacon, Chives",
+          "prices": [
+            {
+              "label": "",
+              "price": 7.0
+            }
+          ]
+        },
+        {
+          "name": "Mac & Cheese Bites (10)",
+          "description": "Smoked Gouda and Bacon w/ Ranch",
+          "prices": [
+            {
+              "label": "",
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "name": "Loaded Potato Skins (4)",
+          "description": "Bacon, Cheddar & Sour Cream",
+          "prices": [
+            {
+              "label": "",
+              "price": 8.0
+            }
+          ]
+        },
+        {
+          "name": "Village Combo",
+          "description": "(2) Potato Skins, (4) Mini Corn Dogs, Cheese Curds, (4) Mac Bites, (3) Chicken Fingers, (2) Jalapeno Poppers & (4) Breaded Mushrooms",
+          "prices": [
+            {
+              "label": "",
+              "price": 14.0
+            }
+          ],
+          "notes": "Please No Substitutions"
+        },
+        {
+          "name": "Fresh Cut Fries",
+          "prices": [
+            {
+              "label": "Basket",
+              "price": 5.0
+            },
+            {
+              "label": "Side",
+              "price": 3.0
+            }
+          ],
+          "options": {
+            "Add-ons": [
+              {
+                "name": "Side of Cheese Sauce",
+                "price": 1.0
+              },
+              {
+                "name": "Cheese and Bacon",
+                "price": 2.5
+              }
+            ]
+          }
+        },
+        {
+          "name": "Onion Rings",
+          "prices": [
+            {
+              "label": "",
+              "price": 7.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Build Your Own Fresh Hand Pressed 1/2 Pound Burgers",
+      "description": "Lettuce / Tomato / Onion / Pickle",
+      "items": [
+        {
+          "name": "Build Your Own Burger",
+          "description": "1/2 pound fresh hand pressed burger with Lettuce, Tomato, Onion, Pickle",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ],
+          "options": {
+            "Cheese": [
+              "American",
+              "Bleu",
+              "Pepper Jack",
+              "Provolone",
+              "Cheddar",
+              "Swiss"
+            ],
+            "Add-ons": [
+              {
+                "name": "Extra Burger Patty",
+                "price": 3.0
+              },
+              {
+                "name": "Fresh Cut Fries",
+                "price": 1.5
+              },
+              {
+                "name": "Tater Tots",
+                "price": 1.5
+              },
+              {
+                "name": "Bacon",
+                "price": 1.0
+              },
+              {
+                "name": "Fried Egg",
+                "price": 1.0
+              },
+              {
+                "name": "Salami",
+                "price": 1.0
+              },
+              {
+                "name": "Grilled Mushrooms",
+                "price": 0.5
+              },
+              {
+                "name": "Grilled Onions",
+                "price": 0.5
+              },
+              {
+                "name": "Jalapenos",
+                "price": 0.5
+              }
+            ]
+          }
+        },
+        {
+          "name": "Spicy Ranger",
+          "description": "Jalapenos, Salsa, Sour Cream, Bacon & Pepper Jack Cheese. Substitute Chicken at no additional charge",
+          "prices": [
+            {
+              "label": "",
+              "price": 11.0
+            }
+          ],
+          "needsReview": [
+            "Printed text reads 'Bacon & Pepper / Cheese'; assumed Pepper Jack Cheese"
+          ]
+        },
+        {
+          "name": "Al-Bur Burger",
+          "description": "Potato & Cheese Pierogie, Grilled Onions, Sour Cream & Cheddar Cheese",
+          "prices": [
+            {
+              "label": "",
+              "price": 12.0
+            }
+          ]
+        },
+        {
+          "name": "Village Idiot",
+          "description": "Burger Between Two Grilled Cheese Sandwiches with Lettuce, Tomato, & Onion",
+          "prices": [
+            {
+              "label": "",
+              "price": 13.0
+            }
+          ]
+        },
+        {
+          "name": "Patty Melt",
+          "description": "American Cheese and Grilled Onion on Rye Bread",
+          "prices": [
+            {
+              "label": "",
+              "price": 11.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quesadilla",
+      "description": "Served with Sour Cream and fresh pico on the side",
+      "items": [
+        {
+          "name": "Cheese Quesadilla",
+          "description": "Sauteed Onions, Red Peppers & Tomatoes",
+          "prices": [
+            {
+              "label": "Half",
+              "price": 7.0
+            },
+            {
+              "label": "Full",
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "name": "Grilled Chicken Quesadilla",
+          "description": "Grilled Chicken, Sauteed Onion, Red Peppers & Tomatoes",
+          "prices": [
+            {
+              "label": "Half",
+              "price": 10.0
+            },
+            {
+              "label": "Full",
+              "price": 14.0
+            }
+          ]
+        },
+        {
+          "name": "Steak Quesadilla",
+          "description": "Grilled Sirloin Strips, Sauteed Onions, Red Peppers & Tomatoes",
+          "prices": [
+            {
+              "label": "Half",
+              "price": 10.0
+            },
+            {
+              "label": "Full",
+              "price": 15.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Soup",
+      "items": [
+        {
+          "name": "Soup of the Day",
+          "prices": [
+            {
+              "label": "Cup",
+              "price": 3.0
+            },
+            {
+              "label": "Bowl",
+              "price": 4.0
+            }
+          ],
+          "notes": "Daily soup can be posted from the dashboard"
+        }
+      ]
+    },
+    {
+      "name": "Entrees",
+      "items": [
+        {
+          "name": "Smoked Baby Back Ribs",
+          "description": "Served with Fresh Cut Fries and Cole Slaw",
+          "prices": [
+            {
+              "label": "Half Slab",
+              "price": 13.0
+            },
+            {
+              "label": "Full Slab",
+              "price": 24.0
+            }
+          ]
+        },
+        {
+          "name": "Center Cut Sirloin Filet",
+          "description": "10 ounce Hand Cut Sirloin Filet served with Fresh Cut Fries and a Veggie",
+          "prices": [
+            {
+              "label": "",
+              "price": 13.0
+            }
+          ]
+        },
+        {
+          "name": "Cajun Chicken Pasta",
+          "description": "Breaded Cajun Chicken Over Bowtie Pasta with Mushrooms, Red Onion, and Red Pepper in Cajun Cream Sauce",
+          "prices": [
+            {
+              "label": "",
+              "price": 13.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sandwiches and Wraps",
+      "description": "Add Fresh Cut Fries or Tater Tots to any sandwich for 1.50. Any sandwich can be made into a wrap or choose from White or Rye Bread.",
+      "options": {
+        "Bread": [
+          "White",
+          "Rye",
+          "Wrap"
+        ],
+        "Add-ons": [
+          {
+            "name": "Fresh Cut Fries",
+            "price": 1.5
+          },
+          {
+            "name": "Tater Tots",
+            "price": 1.5
+          }
+        ]
+      },
+      "items": [
+        {
+          "name": "Buffalo Chicken Sandwich",
+          "description": "Grilled or Breaded. Tossed in Buffalo Sauce with Cheddar cheese, Lettuce & Tomato. Served with a side of Ranch or Blue Cheese",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ],
+          "options": {
+            "Style": [
+              "Grilled",
+              "Breaded"
+            ],
+            "Add-ons": [
+              {
+                "name": "Bacon",
+                "price": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "name": "Chicken Sandwich",
+          "description": "Grilled or Breaded. Choice of Regular, BBQ, Cajun, or Teriyaki. Lettuce, Tomato, & Mayo",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ],
+          "options": {
+            "Style": [
+              "Grilled",
+              "Breaded"
+            ],
+            "Flavor": [
+              "Regular",
+              "BBQ",
+              "Cajun",
+              "Teriyaki"
+            ],
+            "Add-ons": [
+              {
+                "name": "Bacon",
+                "price": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "name": "Chicken Philly",
+          "description": "Grilled Chicken Breast strips with Grilled Onions, Mushrooms & Provolone",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "name": "Village Philly Cheesesteak",
+          "description": "Sirloin Strips, Onions, Mushrooms & Provolone",
+          "prices": [
+            {
+              "label": "",
+              "price": 11.0
+            }
+          ]
+        },
+        {
+          "name": "Cajun Chicken Wrap",
+          "description": "Chicken Grilled with Cajun Seasoning, Grilled Onions, Mushrooms, Lettuce, Tomato & Swiss Cheese",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "name": "Chicken Caesar Wrap",
+          "description": "Grilled Chicken, Lettuce, Tomato & Caesar Dressing",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ]
+        },
+        {
+          "name": "Chicken BLT Wrap",
+          "description": "Grilled or Breaded Chicken, Bacon, Lettuce, Tomato. Served with Mayo or Ranch",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ],
+          "options": {
+            "Style": [
+              "Grilled",
+              "Breaded"
+            ],
+            "Sauce": [
+              "Mayo",
+              "Ranch"
+            ]
+          }
+        },
+        {
+          "name": "Grilled Cheese",
+          "description": "Two slices of Texas toast with choice of cheese",
+          "prices": [
+            {
+              "label": "",
+              "price": 4.0
+            }
+          ],
+          "options": {
+            "Add-ons": [
+              {
+                "name": "Tomato",
+                "price": 0.5
+              },
+              {
+                "name": "Bacon",
+                "price": 1.0
+              }
+            ]
+          }
+        },
+        {
+          "name": "BLT",
+          "description": "Lettuce, Tomato & Mayo",
+          "prices": [
+            {
+              "label": "Single",
+              "price": 6.5
+            },
+            {
+              "label": "Triple Decker",
+              "price": 8.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "description": "Dressings: Italian, Ranch, Blue Cheese, Thousand Island, Balsamic Vinaigrette, Honey Mustard, French and Caesar",
+      "options": {
+        "Dressing": [
+          "Italian",
+          "Ranch",
+          "Blue Cheese",
+          "Thousand Island",
+          "Balsamic Vinaigrette",
+          "Honey Mustard",
+          "French",
+          "Caesar"
+        ]
+      },
+      "items": [
+        {
+          "name": "House Salad",
+          "description": "Iceberg Lettuce, Tomato, Onion, Bacon, Cucumber and (2) Cheeses",
+          "prices": [
+            {
+              "label": "",
+              "price": 8.0
+            }
+          ],
+          "options": {
+            "Add-ons": [
+              {
+                "name": "Chicken",
+                "price": 3.5
+              },
+              {
+                "name": "Steak",
+                "price": 5.0
+              }
+            ]
+          }
+        },
+        {
+          "name": "Buffalo Ranch Chicken Salad",
+          "description": "Hand Breaded Buttermilk Fried Chicken Strips tossed in Buffalo ranch sauce served over Iceberg with Tomato, Onion, Cucumber & Cheddar Cheese",
+          "prices": [
+            {
+              "label": "",
+              "price": 10.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
