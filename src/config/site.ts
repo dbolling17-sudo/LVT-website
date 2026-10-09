@@ -2,6 +2,13 @@
 // so changing the ordering link means changing it here (or setting NEXT_PUBLIC_ORDER_URL).
 // Anything marked TBC is not confirmed yet and renders as a visible placeholder.
 
+function siteUrl() {
+  const explicit = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL;
+  if (explicit) return explicit.trim().replace(/\/+$/, "");
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  return vercel ? `https://${vercel}` : "http://localhost:3000";
+}
+
 export const SITE = {
   name: "Lakewood Village Tavern",
   shortName: "LVT",
@@ -11,7 +18,8 @@ export const SITE = {
   orderUrl: process.env.NEXT_PUBLIC_ORDER_URL || "https://lakewoodvillagetavern.hrpos.heartland.us/menu",
   /** Google Analytics 4, e.g. G-XXXXXXX. Nothing is sent until this is set. */
   ga4MeasurementId: process.env.NEXT_PUBLIC_GA4_ID || "",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  /** Public address of the site. On Vercel it defaults to the production domain, so no setting is needed. */
+  siteUrl: siteUrl(),
   timeZone: "America/New_York",
   phone: { display: "216-521-0301", tel: "+12165210301" },
   city: "Lakewood, Ohio",
