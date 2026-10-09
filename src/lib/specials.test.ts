@@ -32,3 +32,11 @@ describe("specials", () => {
     expect(specialState(add, "2026-10-12")).toBe("active");
   });
 });
+
+describe("weekly fallback", async () => {
+  const { withWeeklyFallback } = await import("./content");
+  it("keeps the starting schedule until a weekly special is entered", () => {
+    expect(withWeeklyFallback([add]).map((s) => s.name)).toContain("Mussels");
+    expect(withWeeklyFallback([{ ...sched[1], id: "custom", name: "Mussels night" }, add]).map((s) => s.name)).toEqual(["Mussels night", "Brisket Sliders"]);
+  });
+});

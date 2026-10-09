@@ -1,6 +1,7 @@
 // Reads events and specials. With Sanity connected, results are cached and tagged so a
 // publish in the Studio refreshes them (see src/app/api/revalidate). Without Sanity, the
-// site shows Devon's weekly specials as starting content and no events.
+// site shows Devon's weekly specials as starting content and no events. If Sanity can't be
+// reached, pages fall back the same way rather than failing.
 import { cacheLife, cacheTag } from "next/cache";
 import { defineQuery } from "next-sanity";
 import { client } from "@/sanity/client";
@@ -31,13 +32,28 @@ export async function getEvents(): Promise<LvtEvent[]> {
   cacheLife("hours");
   if (process.env.LVT_FIXTURES === "1") return fixtureEvents();
   if (!client) return [];
-  return clean(await client.fetch<LvtEvent[]>(EVENTS_QUERY));
+  try {
+    return clean(await client.fetch<LvtEvent[]>(EVENTS_QUERY));
+  } catch (err) {
+    console.error("Couldn't load events from Sanity", err);
+    return [];
+  }
 }
 
 export async function getSpecials(): Promise<Special[]> {
   "use cache";
   cacheTag("special");
   cacheLife("hours");
-  if (!client) return WEEKLY_STARTING_CONTENT;
-  return clean(await client.fetch<Special[]>(SPECIALS_QUERY));
+  if (!client || process.env.LVT_FIXTURES === "1") return WEEKLY_STARTING_CONTENT;
+  try {
+    return withWeeklyFallback(clean(await client.fetch<Special[]>(SPECIALS_QUERY)));
+  } catch (err) {
+    console.error("Couldn't load specials from Sanity", err);
+    return WEEKLY_STARTING_CONTENT;
+  }
+}
+
+/** Until any weekly special has been entered in the Studio, keep showing Devon's weekly schedule. */
+export function withWeeklyFallback(list: Special[]): Special[] {
+  return list.some((s) => s.type === "weekly") ? list : [...WEEKLY_STARTING_CONTENT, ...list];
 }

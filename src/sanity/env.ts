@@ -1,6 +1,6 @@
-// Sanity project settings. Until Devon's Sanity project exists these are empty,
-// and the site falls back to src/data/starting-content.ts with no events.
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "";
+// Sanity project settings. The project ID is public (it appears in every page that loads
+// content), so Devon's project is the default; the env var can point a preview at another one.
+export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "vp3mgov9";
 export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 export const apiVersion = "2026-10-01";
 export const sanityConfigured = Boolean(projectId);

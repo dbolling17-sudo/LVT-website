@@ -23,8 +23,8 @@ Design: "Modern Neighborhood Tavern", approved by Devon on 2026-10-09.
   until confirmed and render as visible placeholders.
 - **Events and specials rules:** `src/lib/events.ts` and `src/lib/specials.ts`, all in Lakewood time
   (America/New_York). Events expire on their own after their last date; specials archive after their end date.
-- **Content:** `src/lib/content.ts` reads Sanity. Without a Sanity project it shows Devon's weekly specials
-  (`src/data/starting-content.ts`) and no events.
+- **Content:** `src/lib/content.ts` reads Sanity. If Sanity has no weekly specials yet, or can't be reached,
+  it shows Devon's weekly specials (`src/data/starting-content.ts`).
 
 ## Running it
 
@@ -38,8 +38,10 @@ npm run build && npm run test:e2e   # browser checks on desktop and phone
 
 ## Connecting Sanity
 
-1. Create a project at sanity.io/manage and set `NEXT_PUBLIC_SANITY_PROJECT_ID`.
-2. Add the site's domains (and `http://localhost:3000`) under API → CORS origins, with credentials.
-3. Add a webhook to `https://<domain>/api/revalidate` for `event` and `special` documents, with projection
+The site uses Devon's Sanity project `vp3mgov9` (dataset `production`) by default.
+
+1. In sanity.io/manage → API → CORS origins, add the site's domains and `http://localhost:3000`, with credentials allowed, so `/studio` can sign in.
+2. Add a webhook to `https://<domain>/api/revalidate` for `event` and `special` documents, with projection
    `{_type}` and a secret matching `SANITY_REVALIDATE_SECRET`.
-4. Enter the seven weekly specials in `/studio` (they're listed in `src/data/starting-content.ts`).
+3. Copy the weekly specials into Sanity: `SANITY_API_TOKEN=... node scripts/seed-weekly-specials.mjs`.
+   Until a weekly special exists in Sanity, the site keeps showing the starting schedule.
