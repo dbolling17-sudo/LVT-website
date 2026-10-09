@@ -28,10 +28,12 @@ export const SITE = {
     { days: [0, 1, 2, 3, 4], label: "Sun – Thu", open: "11:00", close: "23:00", text: "11 AM – 11 PM" },
     { days: [5, 6], label: "Fri – Sat", open: "11:00", close: "24:00", text: "11 AM – Midnight" },
   ],
-  // TBC: fill these in once Devon confirms them.
-  address: null as null | { street: string; city: string; region: string; postalCode: string },
-  barHours: null as null | string,
-  social: { facebook: null as null | string, instagram: null as null | string },
+  /** Bar (opening) hours, confirmed by Devon on 2026-10-09: every day, closing past midnight. */
+  barHours: { open: "11:00", close: "02:30", text: "Open daily 11 AM – 2:30 AM" },
+  /** Confirmed by Devon on 2026-10-09. */
+  address: { street: "13437 Madison Ave", city: "Lakewood", region: "OH", postalCode: "44107" },
+  // Instagram is TBC: fill it in once Devon confirms it.
+  social: { facebook: "https://facebook.com/LVTlakewood" as null | string, instagram: null as null | string },
   photoCredit: "descry",
 } as const;
 
