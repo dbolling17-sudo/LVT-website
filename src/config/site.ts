@@ -5,8 +5,8 @@
 function siteUrl() {
   const explicit = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.trim().replace(/\/+$/, "");
-  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  return vercel ? `https://${vercel}` : "http://localhost:3000";
+  // The tavern's domain, bought by Devon on 2026-10-10.
+  return process.env.VERCEL ? "https://lakewoodvillagetav.com" : "http://localhost:3000";
 }
 
 export const SITE = {
@@ -18,7 +18,7 @@ export const SITE = {
   orderUrl: process.env.NEXT_PUBLIC_ORDER_URL || "https://lakewoodvillagetavern.hrpos.heartland.us/menu",
   /** Google Analytics 4, e.g. G-XXXXXXX. Nothing is sent until this is set. */
   ga4MeasurementId: process.env.NEXT_PUBLIC_GA4_ID || "",
-  /** Public address of the site. On Vercel it defaults to the production domain, so no setting is needed. */
+  /** Public address of the site. On Vercel it is the tavern's domain unless SITE_URL is set. */
   siteUrl: siteUrl(),
   timeZone: "America/New_York",
   phone: { display: "216-521-0301", tel: "+12165210301" },
