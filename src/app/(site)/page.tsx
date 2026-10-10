@@ -99,18 +99,6 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="heritage" id="about">
-        <div className="wrap">
-          <div className="year">{SITE.established}</div>
-          <div>
-            <h2 style={{ fontSize: 28, fontWeight: 800 }}>Part of the neighborhood since {SITE.established}.</h2>
-            <p className="ph" style={{ marginTop: 10, maxWidth: "56ch" }}>
-              [Your story goes here: who opened the tavern, what&apos;s changed and what hasn&apos;t. We&apos;ll write it together from your notes.]
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="visit" style={{ paddingTop: 0 }}>
         <div className="wrap visit">
           <div>
