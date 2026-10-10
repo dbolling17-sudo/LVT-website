@@ -41,6 +41,5 @@ export const NAV = [
   { href: "/#specials", label: "Specials", mobile: "Today's Specials" },
   { href: "/events", label: "Events", mobile: "Events" },
   { href: "/menu", label: "Menu", mobile: "Menu" },
-  { href: "/#about", label: "About", mobile: "About" },
   { href: "/#visit", label: "Visit", mobile: "Hours & Location" },
 ];
