@@ -111,8 +111,6 @@ section{padding-block:48px}
 .pickup li::before{content:"★";color:var(--gold-btn)}
 .pickup small{display:block;color:var(--muted);font-size:13px;margin-top:10px}
 
-.heritage .wrap{display:grid;gap:18px;align-items:center}
-.year{font-size:clamp(80px,22vw,170px);font-weight:800;line-height:.85;letter-spacing:-.04em;color:var(--gold)}
 .ph{color:var(--muted);font-style:italic}
 
 .visit{display:grid;gap:22px}
@@ -145,7 +143,6 @@ footer .wrap{display:grid;gap:14px}
   .today-grid{grid-template-columns:1fr 1.05fr;gap:44px;align-items:start}
   .plates{grid-template-columns:repeat(4,minmax(0,1fr))}
   .pickup .wrap{grid-template-columns:1.3fr auto}
-  .heritage .wrap{grid-template-columns:auto 1fr;gap:40px}
   .visit{grid-template-columns:repeat(3,1fr)}
   .bar{display:none}
   footer{padding-bottom:32px}
