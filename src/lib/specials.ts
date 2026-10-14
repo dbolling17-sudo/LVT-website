@@ -1,6 +1,6 @@
 // Daily specials. Weekly specials repeat on their weekdays; additional specials run between
 // a start and end date. Both are content edited in Sanity, not rules in code.
-import { D, type IsoDate } from "./dates";
+import { D, DOW, DOWL, type IsoDate } from "./dates";
 import type { ImageRef } from "./events";
 
 export type Special = {
@@ -39,4 +39,12 @@ export function specialState(sp: Special, today: IsoDate): "active" | "scheduled
   if (sp.endDate && sp.endDate < today) return "archived";
   if (sp.startDate && sp.startDate > today) return "scheduled";
   return "active";
+}
+
+/** The line under a special's name: its description, else when it runs. One-day specials get no line. */
+export function specialNote(sp: Special, day: IsoDate) {
+  if (sp.description) return sp.description;
+  if (sp.type === "weekly") return `Every ${DOWL[D.dow(day)]}`;
+  if (!sp.endDate || sp.endDate === sp.startDate) return "";
+  return `Through ${DOW[D.dow(sp.endDate)]} ${Number(sp.endDate.slice(5, 7))}/${D.dom(sp.endDate)}`;
 }
