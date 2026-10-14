@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { D, DOW, DOWL, MON, money, type IsoDate } from "@/lib/dates";
-import { specialsFor, type Special } from "@/lib/specials";
+import { specialNote, specialsFor, type Special } from "@/lib/specials";
 import { OrderButton } from "./OrderButton";
 
 /** The chalkboard: today's specials, with the rest of the week one tap away. */
@@ -25,7 +25,7 @@ export function SpecialsBoard({ today, specials }: { today: IsoDate; specials: S
           {list.map((s) => (
             <li key={s.id}>
               <b>{s.name}</b>
-              <span>{s.description || (s.type === "weekly" ? `Every ${DOWL[dow]}` : s.endDate ? `Through ${DOW[D.dow(s.endDate)]} ${Number(s.endDate.slice(5, 7))}/${D.dom(s.endDate)}` : "")}</span>
+              <span>{specialNote(s, day)}</span>
               {s.price != null && <i>{money(s.price)}</i>}
             </li>
           ))}

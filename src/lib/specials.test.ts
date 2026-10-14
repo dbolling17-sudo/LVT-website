@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { specialsFor, specialState, type Special } from "./specials";
+import { specialNote, specialsFor, specialState, type Special } from "./specials";
 import { WEEKLY_STARTING_CONTENT } from "@/data/starting-content";
 
 const sched = WEEKLY_STARTING_CONTENT;
@@ -38,5 +38,11 @@ describe("weekly fallback", async () => {
   it("keeps the starting schedule until a weekly special is entered", () => {
     expect(withWeeklyFallback([add]).map((s) => s.name)).toContain("Mussels");
     expect(withWeeklyFallback([{ ...sched[1], id: "custom", name: "Mussels night" }, add]).map((s) => s.name)).toEqual(["Mussels night", "Brisket Sliders"]);
+  });
+  it("says how long an additional special runs, except for one-day specials", () => {
+    expect(specialNote(add, "2026-10-12")).toBe("Through Thu 10/15");
+    expect(specialNote({ ...add, startDate: "2026-10-14", endDate: "2026-10-14" }, "2026-10-14")).toBe("");
+    expect(specialNote(sched[1], "2026-10-12")).toBe("Every Monday");
+    expect(specialNote({ ...add, description: "On pretzel buns" }, "2026-10-12")).toBe("On pretzel buns");
   });
 });
